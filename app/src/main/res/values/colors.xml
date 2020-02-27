@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0D71B9</color>
+    <color name="colorPrimaryDark">#E0E0E0</color>
+    <color name="colorAccent">#0971B6</color>
+
+    <!-- region Primary App Colors -->
+
+    <color name="primaryColor">#0D71B9</color>
+    <color name="primaryVariantColor">#E0E0E0</color>
+    <color name="primaryTextColor">#8C8C8C</color>
+
+    <color name="secondaryColor">#6495E4</color>
+    <color name="secondaryVariantColor">#5297E7</color>
+    <color name="secondaryTextColor">#FFFFFF</color>
+
+    <color name="colorError">#E81827</color>
+    <color name="colorOnError">#ffffff</color>
+
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorOnBackground">#000000</color>
+    <color name="colorSecondBackground">#EDF1F6</color>
+
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorOnSurface">#212121</color>
+
+    <!--  endregion  -->
+
+    <color name="transparent">#00ffffff</color>
+
+    <color name="light_orange">#E5884A</color>
+    <color name="light_blue">#6495E4</color>
+    <color name="textColor">#8C8C8C</color>
+
+    <color name="colorDark">#535459</color>
+    <color name="darkBlue">#5297E7</color>
+
+    <color name="colorConnectDevice">#3481ef</color>
+
+    <color name="light_grey">#95979E</color>
+
+    <color name="progress_gray">#FFD8D8D8</color>
+    <color name="progress_gray_dark">#FF383838</color>
+    <color name="default_blue_light">#ff33b5e5</color>
+
+    <color name="darkGrey">#F0F0F2</color>
+
+    <color name="lightGrey">#878E9B</color>
+
+    <color name="colorLimeMedication">#00B2BF</color>
+    <color name="colorGreenActivity">#80C03A</color>
+
+    <color name="colorRedBadge">#F33F3F</color>
+    <color name="colorSymptom">#738CA5</color>
+
+    <color name="colorFeelGood">#EB7E3B</color>
+    <color name="colorOtherSymptom">#7A92A9</color>
+
+    <color name="colorSymptomZero">#EDF1F6</color>
+    <color name="colorSymptomOneToThree">#A3B3C3</color>
+    <color name="colorSymptomOverThree">#7A92A9</color>
+
+    <color name="colorBPDone">#5197E8</color>
+    <color name="colorBPNotMeasured">#EDF1F6</color>
+
+    <color name="colorMedication100">#00B2BF</color>
+    <color name="colorMedicationLessThan100">#35D9DF</color>
+    <color name="colorMedication00">#EDF1F6</color>
+
+    <color name="colorActivity100">#75BC2E</color>
+    <color name="colorActivityLessThan100">#B8DD93</color>
+    <color name="colorActivity0">#EDF1F6</color>
+
+    <color name="colorWhite_50">#80FFFFFF</color>
+    <color name="colorBorder">#C7CDD8</color>
+
+    <color name="colorLineChart">#3C7BC9</color>
+</resources>

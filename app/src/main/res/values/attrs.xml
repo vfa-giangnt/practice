@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomToolbarStyle">
+        <attr name="title" format="string" />
+        <attr name="enableBackButton" format="boolean" />
+        <attr name="enableActionButton" format="boolean" />
+        <attr name="rightActionText" format="string" />/
+    </declare-styleable>
+    <declare-styleable name="NumberMeasurementCycleViewStyle">
+        <attr name="value" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="SeekArc">
+        <attr name="thumb" format="reference" />
+        <attr name="thumbOffset" format="dimension" />
+        <attr name="max" format="integer" />
+        <attr name="progressWidth" format="dimension" />
+        <attr name="arcWidth" format="dimension" />
+        <attr name="progress" format="integer" />
+        <attr name="rotation" format="integer" />
+        <attr name="startAngle" format="integer" />
+        <attr name="sweepAngle" format="integer" />
+        <attr name="arcColor" format="color" />
+        <attr name="progressColor" format="color" />
+        <attr name="roundEdges" format="boolean" />
+        <attr name="touchInside" format="boolean" />
+        <attr name="clockwise" format="boolean" />
+        <attr name="enabled" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SeekArcTheme">
+        <attr name="seekArcStyle" format="reference"></attr>
+    </declare-styleable>
+    <declare-styleable name="ActivityItemViewStyle">
+        <attr name="aivTitle" format="string" />
+        <attr name="aivContent" format="string" />
+        <attr name="aivIconColor" format="color" />
+        <attr name="aivIcon" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="SquareViewStyle">
+        <attr name="svBackGroundColor" format="color" />
+        <attr name="svIcon" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="IconViewStyle">
+        <attr name="ivIcon" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="SettingItemViewStyle">
+        <attr name="sivTitle" format="string" />
+        <attr name="sivValue" format="string" />
+        <attr name="sivIcon" format="reference" />
+        <attr name="sivShowIcon" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="DotViewStyle">
+        <attr name="dvColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="InputMeasurementViewStyle">
+        <attr name="imvIndex" format="string" />
+        <attr name="imvTitle" format="string" />
+    </declare-styleable>
+    <declare-styleable name="MedicationTakenViewStyle">
+        <attr name="mtvText" format="string" />
+        <attr name="mtvTaken" format="boolean" />
+        <attr name="mtvIcon" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="ActivityTakenViewStyle">
+        <attr name="atvText" format="string" />
+        <attr name="atvTaken" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="SymptomItemViewStyle">
+        <attr name="sivText" format="string" />
+        <attr name="sivSelect" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="ReminderItemViewStyle">
+        <attr name="rivIcon" format="reference" />
+        <attr name="rivText" format="string" />
+        <attr name="rivValue" format="boolean" />
+    </declare-styleable>
+
+    <attr name="ToolbarBottomLineColor" format="reference" />
+
+    <declare-styleable name="CircleIndicator">
+        <attr name="ci_width" format="dimension" />
+        <attr name="ci_height" format="dimension" />
+        <attr name="ci_margin" format="dimension" />
+        <attr name="ci_animator" format="reference" />
+        <attr name="ci_animator_reverse" format="reference" />
+        <attr name="ci_drawable" format="reference" />
+        <attr name="ci_drawable_unselected" format="reference" />
+
+        <attr name="ci_orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+
+        <attr name="ci_gravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+            <flag name="center_vertical" value="0x10" />
+            <flag name="fill_vertical" value="0x70" />
+            <flag name="center_horizontal" value="0x01" />
+            <flag name="fill_horizontal" value="0x07" />
+            <flag name="center" value="0x11" />
+            <flag name="fill" value="0x77" />
+            <flag name="clip_vertical" value="0x80" />
+            <flag name="clip_horizontal" value="0x08" />
+            <flag name="start" value="0x00800003" />
+            <flag name="end" value="0x00800005" />
+        </attr>
+
+    </declare-styleable>
+
+
+</resources>

@@ -1,0 +1,155 @@
+apply plugin: 'com.android.application'
+apply plugin: "androidx.navigation.safeargs"
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+
+android {
+
+    signingConfigs {
+        release {
+            storeFile file(".sign/release.jks")
+            keyAlias System.getenv("KEY_ALIAS")
+            keyPassword System.getenv("KEY_PASSWORD")
+            storePassword System.getenv("KEYSTORE_PASSWORD")
+        }
+    }
+
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "vfa.gaunau.practice"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField("String", "API_ENDPOINT", "\"https://alb-stg-euwt1-cd015-01.zero-events.com/graphql\"")
+            buildConfigField("int", "DB_VERSION", "1")
+        }
+    }
+    // Dùng ButterKnife nhớ mở config này lên mọe
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+ext {
+    butterKnifeVersion = "10.2.0"
+    navigationVersion = "2.2.0-rc04"
+    smartAdapterVersion = "1.3.1"
+
+    coreVersion = "1.2.0"
+    appcompatVersion = "1.1.0"
+    constraintLayoutVersion = "1.1.3"
+
+    eventBusVersion = "3.1.1"
+    flowLayoutVersion = "1.3.0"
+
+    okHTTPVersion = "4.3.1"
+    graphqlVersion = "1.2.2"
+
+    daggerVersion = '2.25.2'
+    roomVersion = "2.2.3"
+
+    lifecycleVersion = "2.1.0"
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
+
+    implementation "androidx.navigation:navigation-fragment:$navigationVersion"
+    implementation "androidx.navigation:navigation-ui:$navigationVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
+
+    implementation "androidx.core:core:$coreVersion"
+    implementation "androidx.core:core-ktx:$coreVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+
+    implementation "com.orhanobut:hawk:2.0.1"
+
+    implementation "org.greenrobot:eventbus:$eventBusVersion"
+
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    implementation "com.squareup.okhttp3:okhttp:$okHTTPVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHTTPVersion"
+
+    implementation "androidx.room:room-runtime:$roomVersion"
+    annotationProcessor "androidx.room:room-compiler:$roomVersion"
+
+    implementation "com.github.skydoves:expandablelayout:1.0.3"
+
+    implementation 'com.mikhaellopez:circularprogressbar:3.0.3'
+
+    // Loggger
+    implementation "com.jakewharton.timber:timber:4.7.1"
+
+    // rx Android
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
+
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
+
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.17'
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+
+    implementation 'com.afollestad.material-dialogs:core:3.1.1'
+
+
+    // Enter PIN code
+    implementation('com.alimuzaffar.lib:pinentryedittext:2.0.6') {
+        // Exclude is only needed if you already have
+        // androidx.appcompat as a dependency in your app.
+        exclude group: 'androidx.appcompat', module: 'appcompat'
+    }
+
+    implementation "com.jakewharton:butterknife:$butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
+
+    //Smart Adapter
+    implementation "io.nlopez.smartadapters:library:$smartAdapterVersion"
+
+    // Flow Layout
+    implementation "com.nex3z:flow-layout:$flowLayoutVersion"
+
+    // Datetime Picker
+    implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
+
+    implementation "androidx.appcompat:appcompat:$appcompatVersion"
+
+    implementation "com.google.dagger:dagger-android:$daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+}
+repositories {
+    mavenCentral()
+}
