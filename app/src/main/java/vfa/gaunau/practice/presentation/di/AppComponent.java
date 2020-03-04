@@ -16,6 +16,7 @@ import vfa.gaunau.practice.presentation.App;
         ActivityBuildersModule.class,
         FragmentBuildersModule.class,
         ViewModelModule.class,
+        RepositoryModule.class
 })
 public interface AppComponent {
 

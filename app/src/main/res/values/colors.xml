@@ -72,6 +72,7 @@
     <color name="colorActivity0">#EDF1F6</color>
 
     <color name="colorWhite_50">#80FFFFFF</color>
+    <color name="colorWhite_90">#D0FFFFFF</color>
     <color name="colorBorder">#C7CDD8</color>
 
     <color name="colorLineChart">#3C7BC9</color>

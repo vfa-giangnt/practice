@@ -8,4 +8,28 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="navTextActive">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="navTextInactive">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="normalTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <style name="toolbarTextViewStyle" parent="normalTextViewStyle">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">@color/colorOnSurface</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="bigTitleTextViewStyle" parent="normalTextViewStyle">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>
