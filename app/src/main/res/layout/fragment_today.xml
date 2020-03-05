@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,20 +7,17 @@
     android:orientation="vertical"
     tools:context=".presentation.ui.main.MainFragment">
 
-    <include
-        android:id="@+id/layout_toolbar"
-        layout="@layout/toolbar_main" />
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="32dp"
-            app:cardCornerRadius="12dp"
+            app:cardCornerRadius="8dp"
             app:cardElevation="5dp">
 
             <FrameLayout
@@ -63,7 +60,14 @@
             </FrameLayout>
 
         </androidx.cardview.widget.CardView>
+
+
     </FrameLayout>
 
-</LinearLayout>
+    <!-- Adding bottom sheet after main content -->
+    <include
+        layout="@layout/bottom_sheet_today"
+        android:visibility="visible" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
